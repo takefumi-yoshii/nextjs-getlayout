@@ -1,10 +1,8 @@
 import { Home } from "@/templates/Home";
-import type { NextPageWithLayout } from "@/types";
+import { NextPage } from "next";
 
-const Page: NextPageWithLayout = () => {
+const Page: NextPage = () => {
   return <Home />;
 };
-
-Page.getLayout = (page) => page;
 
 export default Page;

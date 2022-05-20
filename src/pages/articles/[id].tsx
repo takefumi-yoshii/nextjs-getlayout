@@ -1,13 +1,11 @@
-import { ArticlesLayout } from "@/layouts/articles";
 import { Article } from "@/templates/Article";
-import type { NextPageWithLayout } from "@/types";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 type Props = {
   data: {};
 };
 
-const Page: NextPageWithLayout = () => {
+const Page: NextPage = () => {
   return <Article />;
 };
 
@@ -21,7 +19,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: true,
   };
 };
-
-Page.getLayout = ArticlesLayout;
 
 export default Page;
